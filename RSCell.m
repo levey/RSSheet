@@ -10,14 +10,13 @@
 
 @implementation RSCell
 @synthesize style, content, type;
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
+- (id)init {
+	self = [super init];
+	if (self) {
+		// Initialization code here.
+	}
+
+	return self;
 }
 
 @end

@@ -10,18 +10,13 @@
 
 @implementation RSStyle
 @synthesize font, size, alignmentH, alignmentV, color;
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
--(void)dealloc
-{
-    [super dealloc];
+- (id)init {
+	self = [super init];
+	if (self) {
+		// Initialization code here.
+	}
+
+	return self;
 }
 
 @end

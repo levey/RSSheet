@@ -15,20 +15,19 @@
 #import "RSStyle.h"
 @interface RSworkBook : NSObject
 {
-    NSString * author;
-    float version;
-    NSDate * date;
-    RSStyle * defaultStyle;
-    
-    NSMutableArray * arrayWorkSheet;
-    
+	NSString *author;
+	float version;
+	NSDate *date;
+	RSStyle *defaultStyle;
+
+	NSMutableArray *arrayWorkSheet;
 }
 
-@property(nonatomic, retain)NSString * author;
-@property(nonatomic, retain)NSDate * date;
-@property(nonatomic, assign)float version;
-@property(nonatomic, retain)RSStyle * defaultStyle;
+@property (nonatomic, strong) NSString *author;
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, assign) float version;
+@property (nonatomic, strong) RSStyle *defaultStyle;
 
 - (void)addWorkSheet:(RSworkSheet *)sheet;
-- (BOOL)writeWithName:(NSString*)name toPath:(NSString*)path;
+- (BOOL)writeWithName:(NSString *)name toPath:(NSString *)path;
 @end

@@ -9,43 +9,32 @@
 #import "RSworkSheet.h"
 
 @implementation RSworkSheet
-@synthesize columnWidth, rowHeight,name, arrayWorkSheetRow;
+@synthesize columnWidth, rowHeight, name, arrayWorkSheetRow;
 
 
-- (id)init
-{
-    self = [super init];
-    if (self) 
-    {
-        // Initialization code here.
-    }
-    
-    return self;
+- (id)init {
+	self = [super init];
+	if (self) {
+		// Initialization code here.
+	}
+
+	return self;
 }
 
-- (void)addWorkSheetRow:(RSworkSheetRow*)row
-{
-    [arrayWorkSheetRow addObject:row];
-}
-- (id)initWithName:(NSString*)nameSheet
-{
-    self = [super init];
-    if (self) 
-    {
-        name = [[NSString alloc] initWithFormat:@"%@",nameSheet];
-        columnWidth = 85;
-        rowHeight=20;
-        arrayWorkSheetRow = [[NSMutableArray alloc] init];
-    }
-    
-    return self; 
+- (void)addWorkSheetRow:(RSworkSheetRow *)row {
+	[arrayWorkSheetRow addObject:row];
 }
 
+- (id)initWithName:(NSString *)nameSheet {
+	self = [super init];
+	if (self) {
+		name = [[NSString alloc] initWithFormat:@"%@", nameSheet];
+		columnWidth = 85;
+		rowHeight = 20;
+		arrayWorkSheetRow = [[NSMutableArray alloc] init];
+	}
 
--(void)dealloc
-{
-    [super dealloc];
-    [name release];
-    [arrayWorkSheetRow release];
+	return self;
 }
+
 @end

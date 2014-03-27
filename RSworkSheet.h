@@ -11,17 +11,17 @@
 
 @interface RSworkSheet : NSObject
 {
-    float columnWidth;
-    float rowHeight;
-    NSString * name;
-    NSMutableArray * arrayWorkSheetRow;
+	float columnWidth;
+	float rowHeight;
+	NSString *name;
+	NSMutableArray *arrayWorkSheetRow;
 }
 
-@property(nonatomic, assign)float columnWidth;
-@property(nonatomic, assign)float rowHeight;
-@property(nonatomic, retain)NSString * name;
-@property(nonatomic, readonly)NSMutableArray * arrayWorkSheetRow;
+@property (nonatomic, assign) float columnWidth;
+@property (nonatomic, assign) float rowHeight;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, readonly) NSMutableArray *arrayWorkSheetRow;
 
-- (void)addWorkSheetRow:(RSworkSheetRow*)row;
-- (id)initWithName:(NSString*)nameSheet;
+- (void)addWorkSheetRow:(RSworkSheetRow *)row;
+- (id)initWithName:(NSString *)nameSheet;
 @end

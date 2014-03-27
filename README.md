@@ -94,3 +94,6 @@ RSworkBook it's the folder that contains all the `RSworkSheet`. It's a simple co
 
 
 this code create test.xls compatible with MSOffice (Mac, Win). Test.xls have two row with two cell. First row have two String and second row have a Number (float) and a date (NSDate)
+
+# ARC Supporting
+Yes

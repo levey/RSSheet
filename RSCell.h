@@ -9,24 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "RSStyle.h"
 
-typedef enum
-{
-    cellTypeNumber=0,
-    cellTypeString=1,
-    cellTypeDate=2
-    
+typedef enum {
+	cellTypeNumber = 0,
+	cellTypeString = 1,
+	cellTypeDate = 2
 }cellType;
 
 
 @interface RSCell : NSObject
 {
-    RSStyle * style;
-    NSString * content;
-    cellType type;
+	RSStyle *style;
+	NSString *content;
+	cellType type;
 }
 
-@property(nonatomic, retain)RSStyle * style;
-@property(nonatomic, retain)NSString * content;
-@property(nonatomic, assign)cellType type;
+@property (nonatomic, strong) RSStyle *style;
+@property (nonatomic, strong) NSString *content;
+@property (nonatomic, assign) cellType type;
 
 @end

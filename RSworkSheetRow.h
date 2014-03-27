@@ -12,22 +12,22 @@
 
 @interface RSworkSheetRow : NSObject
 {
-    NSMutableArray * cellArray;
-    float height;
-    RSStyle * style;
+	NSMutableArray *cellArray;
+	float height;
+	RSStyle *style;
 }
-@property(nonatomic, readonly)NSMutableArray* cellArray;
-@property(nonatomic, assign)float height;
-@property(nonatomic, retain)RSStyle * style;
+@property (nonatomic, readonly) NSMutableArray *cellArray;
+@property (nonatomic, assign) float height;
+@property (nonatomic, strong) RSStyle *style;
 
 
-- (id)initWithHeight:(NSInteger )height;
-- (id)initiWithHeight:(NSInteger )height andStyle:(RSStyle *)style;
+- (id)initWithHeight:(NSInteger)height;
+- (id)initWithHeight:(NSInteger)height andStyle:(RSStyle *)style;
 
 - (void)addCellString:(NSString *)content;
 - (void)addCellString:(NSString *)content withStyle:(RSStyle *)style;
-- (void)addCellNumber:(float )content;
-- (void)addCellNumber:(float )content withStyle:(RSStyle *)style;
+- (void)addCellNumber:(float)content;
+- (void)addCellNumber:(float)content withStyle:(RSStyle *)style;
 - (void)addCellData:(NSDate *)content;
 - (void)addCellData:(NSDate *)content withStyle:(RSStyle *)style;
 @end
